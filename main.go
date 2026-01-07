@@ -82,8 +82,9 @@ func startTraining(char_name, char_class string) string {
 		case "special":
 			fmt.Println(special(char_name, char_class))
 		}
+
 	}
-	
+
 	return "тренировка окончена"
 
 }
@@ -105,6 +106,7 @@ func choiseCharClass() string {
 		 case "healer":
 			fmt.Println("Лекарь — могущественный заклинатель. Черпает силы из природы, веры и духов.")
 		 }
+		 
 		fmt.Print("Нажми (Y), чтобы подтвердить выбор, или любую другую кнопку, чтобы выбрать другого персонажа: ")
 		fmt.Scanf("%s\n", &approveChoice)
 		approveChoice = strings.ToLower(approveChoice)
