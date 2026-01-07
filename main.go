@@ -74,16 +74,12 @@ func startTraining(char_name, char_class string) string {
 		fmt.Print("Введи команду: ")
 		fmt.Scanf("%s\n", &cmd)
 
-		
-		if cmd == "attack" {
+	    switch cmd {
+		case "attack":
 			fmt.Println(attack(char_name, char_class))
-		}
-
-		if cmd == "defence" {
+		case "defence":
 			fmt.Println(defence(char_name, char_class))
-		}
-
-		if cmd == "special" {
+		case "special":
 			fmt.Println(special(char_name, char_class))
 		}
 
@@ -110,6 +106,7 @@ func choiseCharClass() string {
 		 case "healer":
 			fmt.Println("Лекарь — могущественный заклинатель. Черпает силы из природы, веры и духов.")
 		 }
+		 
 		fmt.Print("Нажми (Y), чтобы подтвердить выбор, или любую другую кнопку, чтобы выбрать другого персонажа: ")
 		fmt.Scanf("%s\n", &approveChoice)
 		approveChoice = strings.ToLower(approveChoice)
@@ -136,14 +133,6 @@ func main() {
 	fmt.Println(startTraining(charName, charClass))
 }
 
-<<<<<<< HEAD
-func randint(min, max int) int {
-	return rand.Intn(max-min) + min
-}
-
-///sss
-=======
 func randint(max, min int) int {
 	return rand.Intn(max - min) - 1 
 }
->>>>>>> b08c744c56051bf89c3328acd76374fd711af02b
