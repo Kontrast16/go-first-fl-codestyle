@@ -139,8 +139,3 @@ func main() {
 func randint(max, min int) int {
 	return rand.Intn(max - min) - 1 
 }
-
-
-
-
-
